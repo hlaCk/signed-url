@@ -6,7 +6,6 @@ use Spatie\UrlSigner\MD5UrlSigner;
 
 class SignedUrl extends MD5UrlSigner
 {
-
     /**
      * The key that is used to generate secure signatures.
      *

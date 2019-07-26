@@ -6,10 +6,12 @@ Totally upgraded only for laravel `5.6+`
 ```
 #
 
-[![Version](https://poser.pugx.org/akaunting/signed-url/v/stable.svg)](https://github.com/akaunting/signed-url/releases)
+[![Version](https://poser.pugx.org/spinzar/signed-url/v/stable.svg)](https://github.com/spinzar/signed-url/releases)
 [![StyleCI](https://styleci.io/repos/102290249/shield?style=flat&branch=master)](https://styleci.io/repos/102290249)
-[![Downloads](https://poser.pugx.org/akaunting/signed-url/d/total.svg)](https://github.com/akaunting/signed-url)
-[![License](https://poser.pugx.org/akaunting/signed-url/license.svg)](LICENSE.md)
+[![Build Status](https://scrutinizer-ci.com/g/spinzar/signed-url/badges/build.png?b=master)](https://scrutinizer-ci.com/g/spinzar/signed-url/build-status/master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/spinzar/signed-url/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/spinzar/signed-url/?branch=master)
+[![Downloads](https://poser.pugx.org/spinzar/signed-url/d/total.svg)](https://github.com/spinzar/signed-url)
+[![License](https://poser.pugx.org/spinzar/signed-url/license.svg)](LICENSE.md)
 
 This package can create URLs with a limited lifetime. This is done by adding an expiration date and a signature to the URL.
 
@@ -31,14 +33,14 @@ The URL can be validated with the `validate`-function.
 SignedUrl::validate('https://app.com/protected-route?expires=xxxxxx&signature=xxxxxx');
 ```
 
-The package also provides [a middleware to protect routes](https://github.com/hlack/signed-url#protecting-routes-with-middleware).
+The package also provides [a middleware to protect routes](https://github.com/spinzar/signed-url#protecting-routes-with-middleware).
 
 ## Installation
 
 As you would have guessed the package can be installed via Composer:
 
 ```
-composer require Hlack/signed-url
+composer require spinzar/signed-url
 ```
 
 This package intends to provide tools for formatting and conversion monetary values in an easy, yet powerful way for Laravel projects. In older versions of the framework, just add the serviceprovider, and optionally register the facade:
@@ -48,12 +50,12 @@ This package intends to provide tools for formatting and conversion monetary val
 
 'providers' => [
     ...
-    Hlack\SignedUrl\Provider::class,
+    Spinzar\SignedUrl\Provider::class,
 ];
 
 'aliases' => [
     ...
-    'SignedUrl' => Hlack\SignedUrl\Facade::class,
+    'SignedUrl' => Spinzar\SignedUrl\Facade::class,
 ];
 ```
 
@@ -97,7 +99,7 @@ return [
     | This option indicates the middleware to change language.
     |
     */
-    'middleware'    => 'Hlack\SignedUrl\Middleware\ValidateSignedUrl',
+    'middleware'    => 'Spinzar\SignedUrl\Middleware\ValidateSignedUrl',
 
 ];
 ```
@@ -150,13 +152,12 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Security
 
-If you discover any security related issues, please email security@akaunting.com instead of using the issue tracker.
+If you discover any security related issues, please email security@spinzar.co instead of using the issue tracker.
 
 ## Credits
 
-- [Cüneyt Şentürk](https://github.com/cuneytsenturk)
-- [Sebastian De Deyne](https://github.com/sebastiandedeyne)
-- [All Contributors](../../contributors)
+- [Nassim Nasibullah](https://github.com/spinzar)
+
 
 ## License
 

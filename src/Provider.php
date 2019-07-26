@@ -5,8 +5,6 @@ namespace Hlack\SignedUrl;
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
 
-use Hlack\SignedUrl\SignedUrl;
-
 class Provider extends ServiceProvider
 {
     /**
@@ -15,7 +13,7 @@ class Provider extends ServiceProvider
     public function boot(Router $router)
     {
         $this->publishes([
-            __DIR__ . '/Config/signed-url.php' => config_path('signed-url.php')
+            __DIR__ . '/Config/signed-url.php' => config_path('signed-url.php'),
         ], 'signed-url');
 
         $this->app->singleton('signed-url', function () {
